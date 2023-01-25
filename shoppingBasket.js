@@ -17,3 +17,4 @@ class ShoppingBasket {
     return total;
   }
 }
+module.exports = ShoppingBasket;

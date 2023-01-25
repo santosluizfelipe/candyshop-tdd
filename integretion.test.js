@@ -1,8 +1,12 @@
-const candy = require('./candy.js')
-const shoppingBasket = require('./shoppingBasket.js')
+const Candy = require('./candy.js')
+const ShoppingBasket = require('./shoppingBasket.js')
 
 describe('candy and shoppiong basket', () => {
-  xit('adds 2 and 2', () => {
-    expect(add(2,2)).toBe(4)
+  it('integration', () => {
+    let candy = new Candy("Mars", 4.99);
+    let basket = new ShoppingBasket();
+    basket.addItem(candy)
+
+    expect(basket.getTotalPrice()).toBe(4.99)
   });
 });
